@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sudoku – Play, Generate, Solve</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<header>
+<div class="brand">
+<div class="logo"></div>
+<h1>Sudoku</h1>
+</div>
+<div class="tray">
+<select id="difficulty">
+<option value="easy">Easy</option>
+<option value="medium" selected>Medium</option>
+<option value="hard">Hard</option>
+<option value="expert">Expert</option>
+</select>
+<button id="newGame" class="primary">New Game</button>
+<button id="reset" class="ghost">Reset</button>
+<button id="solve" class="warn">Solve</button>
+<div class="kpi">
+<span>⏱️ <span id="timer">00:00</span></span>
+<span>❌ Mistakes: <span id="mistakes">0</span>/3</span>
+</div>
+</div>
+</header>
+
+
+<div class="layout">
+<div class="board-wrap">
+<div id="board" class="board"></div>
+</div>
+<div class="side">
+<div class="panel">
+<h2>Controls</h2>
+<div class="row">
+<button id="toggleNotes">✏️ Notes: Off</button>
+<button id="check">Check</button>
+<button id="hint">Hint</button>
+<button id="undo" class="ghost">Undo</button>
+<button id="redo" class="ghost">Redo</button>
+</div>
+</div>
+<div class="panel">
+<h2>Number Pad</h2>
+<div class="numpad" id="numpad"></div>
+</div>
+<div class="panel">
+<h2>Status</h2>
+<div class="row">
+<div class="stat">Hints used: <strong id="hintsUsed">0</strong></div>
+<div class="stat">Filled: <strong id="filled">0</strong>/81</div>
+<div class="stat hint" id="message"></div>
+</div>
+</div>
+<div class="panel link">
+Keyboard: Use arrow keys to move, 1–9 to enter, 0/Backspace/Delete to clear. Hold N or toggle Notes for pencil marks.
+</div>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
